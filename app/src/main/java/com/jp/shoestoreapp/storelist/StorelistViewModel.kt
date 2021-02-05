@@ -49,7 +49,8 @@ class StorelistViewModel : ViewModel() {
 
     fun addShoe(shoe: Shoe) {
         shoesList.add(shoe)
-        _shoesListLiveData.value = shoesList
+        _shoeLiveData.value = Shoe(shoe.name, shoe.company, shoe.size, shoe.description)
+         _shoesListLiveData.value = shoesList
         isNavigateListPage.value = true
 
     }
@@ -62,4 +63,20 @@ class StorelistViewModel : ViewModel() {
 
 
     }
+
+    private val _shoes = MutableLiveData<MutableList<Shoe>>(mutableListOf())
+    val shoes: LiveData<MutableList<Shoe>>
+        get() = _shoes
+
+    fun saveCurrentDetail(detail: Shoe?) {
+        detail?.let {
+            _shoes.value?.add(it)
+        }
+    }
+
+
+
+
+
+
 }

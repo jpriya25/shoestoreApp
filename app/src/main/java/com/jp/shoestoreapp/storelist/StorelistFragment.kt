@@ -14,6 +14,7 @@ import com.jp.shoestoreapp.R
 import com.jp.shoestoreapp.Shoe
 import com.jp.shoestoreapp.databinding.ShoelistingBinding
 import com.jp.shoestoreapp.databinding.StorelistFragmentBinding
+import com.jp.shoestoreapp.databinding.WelcomeFragmentBinding
 
 class StorelistFragment : Fragment() {
     private val sharedViewModel: StorelistViewModel by activityViewModels()
@@ -26,7 +27,8 @@ class StorelistFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        var binding = StorelistFragmentBinding.inflate(inflater)
+        val binding: StorelistFragmentBinding = DataBindingUtil.inflate(
+                inflater, R.layout.storelist_fragment, container, false)
 
         binding.viewModel = sharedViewModel
         binding.lifecycleOwner = this
@@ -42,9 +44,13 @@ class StorelistFragment : Fragment() {
 
 
 
-        sharedViewModel.shoesListLiveData.observe(viewLifecycleOwner, Observer { shoes ->
+
+
+        sharedViewModel.shoes.observe(viewLifecycleOwner, Observer { list ->
+
+
             sharedViewModel.reSetValue();
-            for (shoe: Shoe in shoes) {
+            for (shoe: Shoe in list) {
 
                 val shoeLayoutBinding: ShoelistingBinding = DataBindingUtil.inflate(
                         layoutInflater, R.layout.shoelisting, null, false)
@@ -52,7 +58,10 @@ class StorelistFragment : Fragment() {
                 binding.shoesList.addView(shoeLayoutBinding.root)
 
             }
+
         })
+
+
 
 
         setHasOptionsMenu(true)

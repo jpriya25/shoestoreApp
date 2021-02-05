@@ -30,6 +30,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
+                android:orientation="vertical"
                 android:id="@+id/shoes_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

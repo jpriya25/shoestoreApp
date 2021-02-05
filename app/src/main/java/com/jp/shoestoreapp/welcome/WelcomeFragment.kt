@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.observe
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
@@ -26,7 +27,11 @@ class WelcomeFragment : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        var binding = WelcomeFragmentBinding.inflate(inflater)
+
+        val binding: WelcomeFragmentBinding = DataBindingUtil.inflate(
+                inflater, R.layout.welcome_fragment, container, false)
+
+                //    var binding = WelcomeFragmentBinding.inflate(inflater)
         viewModel = ViewModelProvider(this).get(WelcomeViewModel::class.java)
         binding.viewModel=viewModel;
 
