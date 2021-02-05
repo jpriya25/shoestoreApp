@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ShoeStoreApp</string>
+    <string name="email">Enter the Email</string>
+    <string name="password">Enter the Password</string>
+    <string name="login">Login</string>
+    <string name="welcome_text">Welcome to Shoe Store</string>
+    <string name="welcome_text_subtitle">A short welcome message for customers can make their shopping experience a little bit nicer.
+        However, it is one of the key factors when it comes to increasing your sales.</string>
+    <string name="welcome_message">Welcome to store</string>
+    <string name="get_started_button_text">Lets Start</string>
+    <string name="tutor">Lets Shop</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="company_name">Company Name</string>
+    <string name="ShoeName">Shoe Name</string>
+    <string name="price">Price</string>
+    <string name="enter_the_price">Enter the Price</string>
+    <string name="short_description">Short Description</string>
+    <string name="logout_menu">Logout</string>
+    <string name="shoe_listing_format"> Shoe Name : %s \n
+                                        Company Name : %s \n
+                                        Price : %s \n
+                                        Description :%s</string>
+    <string name="shoe_listing"># The mediocre teacher tells. ...\n
+                                # Teaching is more than imparting knowledge, it is inspiring change. ...\n
+                                # Much education today is monumentally ineffective. ...\n
+                                # I never teach my pupils, I only attempt to provide the conditions in which they can learn. \n
+                                # Learning is more than absorbing facts, it is acquiring understanding.</string>
+    <string name="instruction">Instruction Screen</string>
+
+</resources>

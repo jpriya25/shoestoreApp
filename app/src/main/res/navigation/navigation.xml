@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.jp.shoestoreapp.login.Login"
+        android:label="login_fragment"
+        tools:layout="@layout/login_screen">
+        <action
+            android:id="@+id/action_login_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.jp.shoestoreapp.welcome.WelcomeFragment"
+        android:label="welcome_fragment"
+        tools:layout="@layout/welcome_fragment">
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionFragment"
+            app:destination="@id/instructionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="com.jp.shoestoreapp.instruction.InstructionFragment"
+        android:label="instruction_fragment"
+        tools:layout="@layout/instruction_fragment">
+        <action
+            android:id="@+id/action_instructionFragment_to_storelistFragment"
+            app:destination="@id/storelistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storelistFragment"
+        android:name="com.jp.shoestoreapp.storelist.StorelistFragment"
+        android:label="storelist_fragment"
+        tools:layout="@layout/storelist_fragment"
+        app:startDestination="@id/action_storelistFragment_to_login">
+        <action
+            android:id="@+id/action_storelistFragment_to_storeDetailsFragment"
+            app:destination="@id/storeDetailsFragment"
+
+            />
+        <action
+            android:id="@+id/action_storelistFragment_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeDetailsFragment"
+        android:name="com.jp.shoestoreapp.storelist.StoreDetailsFragment"
+        android:label="fragment_store_details"
+        tools:layout="@layout/fragment_store_details">
+
+        <action
+            android:id="@+id/action_storeDetailsFragment_to_storelistFragment"
+            app:destination="@id/storelistFragment"
+            app:popUpTo="@id/storelistFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="company_name">Company Name</string>
+    <string name="ShoeName">shoe_name</string>
+    <string name="logout_menu">Logout</string>
+    <string name="instruction">Instruction Screen</string>
+</resources>
