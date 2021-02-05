@@ -64,6 +64,27 @@ class StorelistFragment : Fragment() {
 
 
 
+
+
+
+
+        sharedViewModel.shoesListLiveData.observe(viewLifecycleOwner, Observer { shoes ->
+
+            sharedViewModel.reSetValue();
+            for (shoe: Shoe in shoes) {
+
+                val shoeLayoutBinding: ShoelistingBinding = DataBindingUtil.inflate(
+                        layoutInflater, R.layout.shoelisting, null, false)
+                shoeLayoutBinding.shoe = shoe
+                binding.shoesList.addView(shoeLayoutBinding.root)
+
+            }
+
+        })
+
+
+
+
         setHasOptionsMenu(true)
         return binding.root;
     }
