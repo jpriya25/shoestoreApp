@@ -9,6 +9,7 @@
             name="viewModel"
             type="com.jp.shoestoreapp.login.LoginViewModel" />
     </data>
+    <!-- //TODO:ConstraintLayout is that it allows you to position all of your children without having to nest any other ViewGroups inside the ConstraintLayout-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

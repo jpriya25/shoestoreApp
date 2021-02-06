@@ -11,7 +11,7 @@
             name="viewModel"
             type="com.jp.shoestoreapp.welcome.WelcomeViewModel" />
     </data>
-    <!--using constraint layout to centre the buttons and textViews horizontally and also specify
+    <!--TODO using constraint layout to centre the buttons and textViews horizontally and also specify
      margin top and bottom easily finding the views' position
      -->
     <androidx.constraintlayout.widget.ConstraintLayout

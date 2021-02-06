@@ -11,6 +11,7 @@
             name="shoe"
             type="com.jp.shoestoreapp.Shoe" />
     </data>
+    <!-- //TODO:ConstraintLayout is that it allows you to position all of your children without having to nest any other ViewGroups inside the ConstraintLayout-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -28,7 +29,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
+<!--         TODO:   layout with the least performance impact of all, also because the views were easily positioned with this particular layout.-->
             <LinearLayout
                 android:orientation="vertical"
                 android:id="@+id/shoes_list"
